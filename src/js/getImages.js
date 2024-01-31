@@ -4,7 +4,7 @@ import { fetchImages, pageLimit } from './fetchImages';
 import { renderImages } from './renderImages';
 import { buttonLoadMore, lightbox } from './index';
 
-//Функція, що фетчить та рендерить порцію картинок
+//A function to fetch and render a portion of images
 const getImages = async (query, pageToFetch) => {
   try {
     Loading.circle('Loading', {
@@ -19,7 +19,7 @@ const getImages = async (query, pageToFetch) => {
       return;
     }
     renderImages(data);
-    //Викликаємо метод refresh бібліотеки simplelightbox після оновлення DOM
+    //We call the refresh method of the simplelightbox library after updating the DOM
     lightbox.refresh();
 
     if (pageToFetch === 1) {

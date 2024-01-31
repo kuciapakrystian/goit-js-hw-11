@@ -1,15 +1,15 @@
 import axios from 'axios';
 import Notiflix from 'notiflix';
 
-//Unique access key to the Pixabay API
+//Унікальний ключ доступу до API Pixabay
 const KEY = '37030220-55e5b35e4370d44ae057df5d9';
 
-//Limit of clickable objects on the page
+//Ліміт отриманих об'ектів на сторінці
 const pageLimit = 40;
 
 axios.defaults.baseURL = 'https://pixabay.com/api/';
 
-//Function to fetch pictures
+//Функція, що фетчить картинки
 const fetchImages = async (queryToFetch, pageToFetch) => {
   const { data } = await axios({
     params: {

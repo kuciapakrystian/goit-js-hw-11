@@ -10,17 +10,17 @@ const formEl = document.querySelector('.search-form');
 const galleryEl = document.querySelector('.gallery');
 const buttonLoadMore = document.querySelector('.load-more');
 
-//We create auditory responses to the form and button
+//Створюємо слухачів подій на форму та кнопку
 formEl.addEventListener('submit', onSubmitForm);
 buttonLoadMore.addEventListener('click', onBtnLoadMoreClick);
 
-//Initialization of the SimpleLightbox library
+//Ініціалізація біблітеки SimpleLightbox
 const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
 });
 
-//Handler function that is generated when submitting photos (fetch + gallery rendering)
+//Функція-хендлер, що відбувається при сабміті фотми (фетч + рендер галереї)
 function onSubmitForm(event) {
   event.preventDefault();
   const query = event.currentTarget.elements.searchQuery.value;
@@ -35,7 +35,7 @@ function onSubmitForm(event) {
   formEl.reset();
 }
 
-//A handler function that renders the next portion of images by clicking on the "Load more" button
+//Функція-хендлер, що рендерить наступну порцію картинок по кліку на кнопку "Load more"
 function onBtnLoadMoreClick() {
   buttonLoadMore.classList.add('unvisible');
   pageToFetch += 1;

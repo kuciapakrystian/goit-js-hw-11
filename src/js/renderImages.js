@@ -1,6 +1,6 @@
 import { galleryEl } from './index';
 
-//A function that generates the layout of an image gallery
+//Функція, що генерує розмітку галереї картинок
 const renderImages = data => {
   const markup = data.hits
     .map(

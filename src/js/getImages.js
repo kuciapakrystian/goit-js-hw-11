@@ -4,7 +4,7 @@ import { fetchImages, pageLimit } from './fetchImages';
 import { renderImages } from './renderImages';
 import { buttonLoadMore, lightbox } from './index';
 
-//A function to fetch and render a portion of images
+// A function to fetch and render a portion of images
 const getImages = async (query, pageToFetch) => {
   try {
     Loading.circle('Loading', {

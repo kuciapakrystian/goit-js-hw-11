@@ -1,7 +1,7 @@
 import axios from 'axios';
 import Notiflix from 'notiflix';
 
-//Унікальний ключ доступу до API Pixabay
+//Unique access key to the Pixabay API
 const KEY = '37030220-55e5b35e4370d44ae057df5d9';
 
 //Ліміт отриманих об'ектів на сторінці
@@ -9,7 +9,7 @@ const pageLimit = 40;
 
 axios.defaults.baseURL = 'https://pixabay.com/api/';
 
-//Функція, що фетчить картинки
+//Function to fetch pictures
 const fetchImages = async (queryToFetch, pageToFetch) => {
   const { data } = await axios({
     params: {

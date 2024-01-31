@@ -42,3 +42,4 @@ const getImages = async (query, pageToFetch) => {
 };
 
 export { getImages };
+//?
